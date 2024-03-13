@@ -50,10 +50,10 @@ nav {
 .content {
     background-color: #aab5e7;
     vertical-align: middle;
-    padding-top: 100px;
+    padding-top: 10px;
 
 }
 
 .footer_css {
-    vertical-align: middle;
+    text-align: center;
 }
