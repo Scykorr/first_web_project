@@ -55,5 +55,47 @@ nav {
 }
 
 .footer_css {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    background-color: #60669e;
+    color: white;
+
+}
+
+footer a:hover {
+    background-color: #2d42fb;
+    color: #212121;
+}
+
+footer a {
+    color: #fcf8f8;
+    padding: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+
+.leftimg {
+    float: left;
+    margin: 7px 7px 7px 0;
+}
+
+
+.mainpagefont {
+    font-family: Snell Roundhand;
+    font-family: cursive;
+    font-size: 30px;
+}
+
+.mainbackground {
+    background-color: #aab5e7;
+}
+
+.contacts_css {
     text-align: center;
 }
