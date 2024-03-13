@@ -1,6 +1,7 @@
 .navigation {
     float: right;
     height: 100%;
+
 }
 
 .navigation a {
@@ -8,17 +9,26 @@
     display: table;
     float: left;
     padding: 0px 20px;
-    background-color: #101010;
+    background-color: #687ddb;
 }
 
 .navigation a li {
     vertical-align: middle;
     display: table-cell;
     font-size: 20px;
-    color: white;
+    color: black;
 }
 
 .navigation a:hover {
     background-color: gray;
     color: #101010;
+}
+
+.footer_css p {
+    text-align: center;
+
+}
+
+.header {
+    background-color: #687ddb;
 }
