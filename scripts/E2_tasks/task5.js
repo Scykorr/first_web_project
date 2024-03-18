@@ -1,12 +1,6 @@
-let arrayVals = [1, 1, 1, 1];
+const arr = [0, null, NaN, 0, 1, 2, 4, "str"];
+console.log('количество элементов: ', arr.length);
 
-let equalVal = true;
-
-if (arrayVals.length === 0){
-    console.log('Введенный массив пустой!');
-}
-else {
-    arrayVals.forEach(function (item, index, array) {
-        console.log(item);
-    })
-}
+arr.forEach(function(item){
+    console.log(item);
+});
