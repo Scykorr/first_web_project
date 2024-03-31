@@ -1,4 +1,7 @@
-const getResDegree = (inpNum, inpDegree) => console.log(Math.pow(inpNum, inpDegree));
+const getResDegree = (inpNum, inpDegree) => {
+    return Math.pow(inpNum, inpDegree);
+}
 
 
-getResDegree(5, 3);
+const result = getResDegree(5, 3);
+console.log(result)
