@@ -1,31 +1,27 @@
-function ElectricalDevice(type, powerConsumption = 300) {
-    this.type = type,
-        this.powerConsumption = powerConsumption
-    this.powerStatus = 'Выключен'
+function ElectricalDevice(type, powerConsumption) {
+    this.type = type;
+    this.powerConsumption = powerConsumption || 300;
+    this.powerStatus = 'Выключен';
 }
 
 ElectricalDevice.prototype.turnOnDevice = function () {
-    this.powerStatus = 'Включен'
+    this.powerStatus = 'Включен';
 }
 
 ElectricalDevice.prototype.turnOffDevice = function () {
-    this.powerStatus = 'Выключен'
-}
-
-ElectricalDevice.prototype.getInpPower = function (power) {
-    console.log(`inp power ${power}`)
+    this.powerStatus = 'Выключен';
 }
 
 
 function TeleVisor(mark) {
-    this.mark = mark,
-        this.channnelNum = 1
+    this.mark = mark
+    this.channnelNum = 1;
 }
 
 
 function ElectricKettle(mark) {
-    this.mark = mark,
-        this.waterTemperature = 40
+    this.mark = mark;
+    this.waterTemperature = 40;
 }
 
 ElectricKettle.prototype = new ElectricalDevice(type = 'Электрический чайник');
@@ -58,25 +54,25 @@ function getCommonSumm() {
     let resultSumm = 0;
     for (let i = 0; i < arguments.length; i++) {
         if (arguments[i].powerStatus == 'Включен') {
-            resultSumm += arguments[i].powerConsumption
+            resultSumm += arguments[i].powerConsumption;
         }
     }
     console.log(`Общая потребляемая мощность: ${resultSumm}`);
 
 }
 
-const simpleElectricKettle = new ElectricKettle(mark = 'Kitfort')
-simpleElectricKettle.powerConsumption = 500
-simpleElectricKettle.turnOnDevice()
-simpleElectricKettle.setTemperature(90)
+const simpleElectricKettle = new ElectricKettle(mark = 'Kitfort');
+simpleElectricKettle.powerConsumption = 500;
+simpleElectricKettle.turnOnDevice();
+simpleElectricKettle.setTemperature(90);
 
-const simpleTeleVisor = new TeleVisor(mark = 'Sumsung')
-simpleTeleVisor.powerConsumption = 800
-simpleTeleVisor.turnOnDevice()
-simpleTeleVisor.changeChannelNumBack()
-simpleTeleVisor.changeChannelNumForward()
-simpleTeleVisor.changeChannelNumForward()
-simpleTeleVisor.changeChannelNumBack()
-simpleTeleVisor.turnOffDevice()
+const simpleTeleVisor = new TeleVisor(mark = 'Sumsung');
+simpleTeleVisor.powerConsumption = 800;
+simpleTeleVisor.turnOnDevice();
+simpleTeleVisor.changeChannelNumBack();
+simpleTeleVisor.changeChannelNumForward();
+simpleTeleVisor.changeChannelNumForward();
+simpleTeleVisor.changeChannelNumBack();
+simpleTeleVisor.turnOffDevice();
 
-getCommonSumm(simpleElectricKettle, simpleTeleVisor)
+getCommonSumm(simpleElectricKettle, simpleTeleVisor);
